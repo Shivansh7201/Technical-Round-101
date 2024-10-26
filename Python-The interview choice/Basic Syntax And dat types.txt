@@ -1,5 +1,7 @@
 **Variable Assignment**
 
+Note:- You will get the answers in last.
+
 1. What is the output of the following code?
 
 x = 5
@@ -14,5 +16,164 @@ Select one of the following options:
 None
 Error
 
-2. 
+Numeric Types
+
+2. Which of the following is NOT a valid way to create a float in Python?
+
+Select one of the following options:
+x = 3.14
+x = float(3)
+x = 3f
+x = 3e2
+
+3.String Operations
+What is the output of the following code?
+
+s = 'hello'
+print(s[1:4])
+
+Select one of the following options:
+hell
+ell
+ello
+he
+
+4.Boolean Operations
+What is the result of the following expression?
+
+True and False or True
+
+Select one of the following options:
+True
+False
+None
+Error
+
+5.Type Conversion
+What is the output of the following code?
+
+print(int('3.14'))
+
+Select one of the following options:
+3
+3.14
+4
+ValueError
+
+6.String Concatenation
+What is the output of the following code?
+
+print('2' + '2')
+
+Select one of the following options:
+4
+22
+'22'
+Error
+
+7.Multiple Assignment
+What is the output of the following code?
+
+a, b, c = 1, 2, 3
+print(b)
+
+Select one of the following options:
+1
+2
+3
+Error
+
+8.Type Checking
+Which function is used to check the type of a variable in Python?
+
+Select one of the following options:
+typeof()
+type()
+instanceOf()
+checkType()
+
+9.String Immutability
+What happens when you try to modify a string in Python?
+
+Select one of the following options:
+The string is modified in-place
+A new string is created
+An error is raised
+The operation is ignored
+
+
+10.What is the output of the following code?
+
+print(5 // 2)
+
+Select one of the following options:
+2.5
+2
+3
+2.0
+
+Answers:- 
+1. Correct Answer:
+
+5
+Explanation:
+In Python, when we assign a value to a variable, it creates a reference to that value. When we do `y = x`, y gets a reference to the value of x at that moment (5). Later changing x to 10 doesn't affect y, as y still refers to the original value 5. This demonstrates that Python uses value semantics for numbers, not reference semantics.
+
+2.Correct Answer:
+
+x = 3f
+Explanation:
+In Python, floats can be created using decimal notation (3.14), by converting an integer using float() function, or using scientific notation (3e2 which equals 300.0). The syntax '3f' is not valid in Python for creating a float. This syntax is used in some other programming languages like Java or C++, but in Python, it will raise a SyntaxError.
+
+3.Correct Answer:
+
+ell
+Explanation:
+In Python, string slicing follows the pattern s[start:end], where start is inclusive and end is exclusive. The slice s[1:4] starts at index 1 (the second character, 'e') and goes up to, but not including, index 4. This results in 'ell'. Remember, in Python, like most programming languages, indexing starts at 0.
+
+4.Correct Answer:
+
+True
+Explanation:
+In Python, boolean operations are evaluated from left to right. 'and' has higher precedence than 'or'. So, 'True and False' is evaluated first, which results in False. Then 'False or True' is evaluated, which results in True. It's equivalent to (True and False) or True. Remember, 'and' returns the first falsy value or the last value if all are truthy, while 'or' returns the first truthy value or the last value if all are falsy.
+
+5. Correct Answer:
+
+ValueError
+Explanation:
+This code will raise a ValueError. The int() function in Python can convert a string to an integer, but only if the string represents a valid integer. '3.14' is a valid float, not an integer. If you want to convert a float string to an integer, you need to first convert it to a float and then to an integer: int(float('3.14')). This would result in 3.
+
+6. Correct Answer:
+
+22
+Explanation:
+In Python, the + operator when used with strings performs concatenation, not addition. So '2' + '2' results in '22'. The output is 22 (without quotes) because print() function displays the string value without the quotes. If you want to perform addition, you need to convert the strings to integers first: int('2') + int('2').
+
+7.Correct Answer:
+
+2
+Explanation:
+Python supports multiple assignment, where you can assign multiple values to multiple variables in a single line. In this case, a is assigned 1, b is assigned 2, and c is assigned 3. Therefore, when we print b, the output is 2. This feature is particularly useful when you want to swap values or unpack sequences.
+
+8.
+Correct Answer:
+
+type()
+Explanation:
+In Python, the type() function is used to check the type of a variable. For example, type(5) returns <class 'int'>, type('hello') returns <class 'str'>, etc. This function is crucial for type checking and debugging. Python, being a dynamically typed language, allows variables to change types, making type() particularly useful.
+
+
+9. Correct Answer:
+
+An error is raised
+Explanation:
+Strings in Python are immutable, which means they cannot be changed after they are created. Any operation that seems to modify a string actually creates a new string object. For example, if you try s[0] = 'H' where s is a string, you'll get a TypeError. To modify a string, you need to create a new string with the desired changes.
+
+20.Correct Answer:
+
+2
+Explanation:
+In Python, // is the floor division operator. It performs division and rounds down to the nearest integer. So 5 // 2 equals 2, not 2.5. This is different from regular division (/) which would return 2.5. Floor division is particularly useful when you need integer division results, like in array indexing or when working with discrete quantities.
+
+
 
