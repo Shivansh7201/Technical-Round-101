@@ -1,0 +1,189 @@
+**Conditional Execution**
+
+1.What will be the output of the following code?
+
+x = 5
+if x > 10:
+    print('Greater than 10')
+elif x > 5:
+    print('Greater than 5')
+else:
+    print('Less than or equal to 5')
+
+Select one of the following options:
+
+Greater than 10
+Greater than 5
+Less than or equal to 5
+No output    
+
+2.What will be the output of the following code?
+
+for i in range(1, 5):
+    print(i, end=' ')
+
+Select one of the following options:
+1 2 3 4 5
+1 2 3 4
+0 1 2 3 4
+0 1 2 3
+
+3.What will be the output of the following code?
+
+count = 0
+while count < 3:
+    print(count, end=' ')
+    count += 1
+
+Select one of the following options:
+0 1 2
+1 2 3
+0 1 2 3
+1 2
+
+4.What will be the output of the following code?
+
+for i in range(5):
+    if i == 3:
+        break
+    print(i, end=' ')
+
+Select one of the following options:
+0 1 2
+0 1 2 3
+0 1 2 3 4
+0 1 2 4
+
+5.What will be the output of the following code?
+
+for i in range(5):
+    if i == 2:
+        continue
+    print(i, end=' ')
+
+Select one of the following options:
+0 1 3 4
+0 1 2 3 4
+0 1 2 4
+1 3 4
+
+6.What will be the output of the following code?
+
+for i in range(2, 10, 2):
+    print(i, end=' ')
+
+Select one of the following options:
+2 4 6 8
+2 4 6 8 10
+2 3 4 5 6 7 8 9
+0 2 4 6 8
+
+7. What will be the output of the following code?
+
+for i in range(2):
+    for j in range(2):
+        print(f'({i},{j})', end=' ')
+
+Select one of the following options:
+(0,0) (0,1) (1,0) (1,1)
+(0,0) (1,0) (0,1) (1,1)
+(0,0) (0,1) (1,0) (1,1) (2,0) (2,1)
+(0,0) (1,1)
+
+8. Loop with Else
+What will be the output of the following code?
+
+for i in range(3):
+    print(i, end=' ')
+else:
+    print('Done')
+
+Select one of the following options:
+0 1 2
+0 1 2 Done
+Done
+0 1 2 3 Done
+
+9. What will be the output of the following code?
+
+x = 5
+print('Even' if x % 2 == 0 else 'Odd')
+
+Select one of the following options:
+Even
+Odd
+5
+True
+
+10. Select one of the following options:
+Even
+Odd
+5
+True
+
+Select one of the following options:
+0 1 2
+0 1 2 3
+Infinite loop
+No output
+
+1.Correct Answer:
+
+Less than or equal to 5
+Explanation:
+The code uses an if-elif-else statement to check the value of x. Since x is 5, it's not greater than 10 (first condition) or greater than 5 (second condition). Therefore, the else block is executed, printing 'Less than or equal to 5'.
+
+2.Correct Answer:
+
+1 2 3 4
+Explanation:
+The range(1, 5) function generates a sequence of numbers from 1 to 4 (5 is excluded). The for loop iterates over this sequence, printing each number followed by a space. Therefore, the output will be '1 2 3 4'.
+
+3.Correct Answer:
+
+0 1 2
+Explanation:
+The while loop continues as long as count is less than 3. In each iteration, it prints the current value of count and then increments it. The loop runs for count values 0, 1, and 2, printing each value. Therefore, the output is '0 1 2'.
+
+4.Correct Answer:
+
+0 1 2
+Explanation:
+The for loop iterates over the range 0 to 4. When i becomes 3, the break statement is executed, which immediately terminates the loop. Therefore, only the numbers 0, 1, and 2 are printed before the loop ends.
+
+5.Correct Answer:
+
+0 1 3 4
+Explanation:
+The for loop iterates over the range 0 to 4. When i is 2, the continue statement is executed, which skips the rest of the loop body for that iteration and moves to the next iteration. Therefore, all numbers except 2 are printed, resulting in the output '0 1 3 4'.
+
+6.Correct Answer:
+
+2 4 6 8
+Explanation:
+The range(2, 10, 2) function generates a sequence starting from 2, ending before 10, with a step of 2. This results in the sequence 2, 4, 6, 8. The for loop iterates over this sequence, printing each number followed by a space.
+
+7.Correct Answer:
+
+(0,0) (0,1) (1,0) (1,1)
+Explanation:
+This code uses nested for loops. The outer loop iterates twice (i = 0, 1), and for each iteration of the outer loop, the inner loop also iterates twice (j = 0, 1). The print statement outputs the coordinates (i,j) for each combination, resulting in the output '(0,0) (0,1) (1,0) (1,1)'.
+
+8.Correct Answer:
+
+0 1 2 Done
+Explanation:
+In Python, a for loop can have an else clause that is executed when the loop completes normally (i.e., not terminated by a break statement). In this case, the loop prints 0, 1, and 2, and then the else block is executed, printing 'Done'. Therefore, the complete output is '0 1 2 Done'.
+
+9.Correct Answer:
+
+Odd
+Explanation:
+This code uses a conditional expression (also known as a ternary operator). It checks if x is even (x % 2 == 0). If true, it prints 'Even', otherwise 'Odd'. Since x is 5, which is odd, the output will be 'Odd'.
+
+10.Correct Answer:
+
+0 1 2
+Explanation:
+This while loop is set to run indefinitely (while True). In each iteration, it prints the current value of i and then increments it. However, there's a condition that breaks the loop when i becomes greater than or equal to 3. Therefore, the loop prints 0, 1, and 2 before breaking, resulting in the output '0 1 2'.
+
