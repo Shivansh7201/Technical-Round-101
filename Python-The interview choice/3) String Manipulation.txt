@@ -1,0 +1,183 @@
+1.text = 'Python Programming'
+print(text[7:17])
+
+Select one of the following options:
+Programming
+Program
+Programmin
+rogrammin
+
+2.What will be the output of the following code?
+
+sentence = 'The quick brown fox'
+words = sentence.split()
+print(len(words))
+
+Select one of the following options:
+3
+4
+19
+20
+
+3. What will be the output of the following code?
+
+words = ['Python', 'is', 'awesome']
+result = '-'.join(words)
+print(result)
+
+Select one of the following options:
+Python-is-awesome
+Pythonisawesome
+Python is awesome
+['Python', 'is', 'awesome']
+
+4. What will be the output of the following code?
+
+text = 'Hello, World!'
+new_text = text.replace('o', '0', 1)
+print(new_text)
+
+Select one of the following options:
+Hell0, World!
+Hello, W0rld!
+Hell0, W0rld!
+Hello, World!
+
+5. What will be the output of the following code?
+
+name = 'Alice'
+age = 30
+print(f'{name} is {age} years old.')
+
+Select one of the following options:
+name is age years old.
+Alice is 30 years old.
+{name} is {age} years old.
+Alice is thirty years old.
+
+6. What will be the output of the following code?
+
+name = 'Bob'
+age = 25
+print('{0} is {1} years old and {0} likes Python.'.format(name, age))
+
+Select one of the following options:
+Bob is 25 years old and Bob likes Python.
+name is age years old and name likes Python.
+Bob is 25 years old and 25 likes Python.
+{0} is {1} years old and {0} likes Python.
+
+7. What will be the output of the following code?
+
+import re
+text = 'The quick brown fox jumps over the lazy dog'
+pattern = r'\b\w{5}\b'
+matches = re.findall(pattern, text)
+print(len(matches))
+
+Select one of the following options:
+4
+3
+5
+6
+
+8. What will be the output of the following code?
+
+text = 'Python'
+print(text[-2])
+
+Select one of the following options:
+P
+n
+o
+h
+
+9. What will happen when you run the following code?
+
+text = 'Hello'
+text[0] = 'J'
+
+Select one of the following options:
+The string will be changed to 'Jello'
+Nothing will happen, the string remains 'Hello'
+A TypeError will be raised
+A ValueError will be raised
+
+10. What will be the output of the following code?
+
+text = '  python programming  '
+result = text.strip().capitalize()
+print(result)
+
+Select one of the following options:
+Python Programming
+Python programming
+python Programming
+PYTHON PROGRAMMING
+
+1. Correct Answer:
+
+Programmin
+Explanation:
+In Python, string slicing is done using the syntax [start:end], where start is inclusive and end is exclusive. In this case, text[7:17] starts at index 7 (the 'P' in 'Programming') and goes up to, but not including, index 17. This results in 'Programmin'. It's important to remember that in Python, indexing starts at 0, and the end index in slicing is not included in the result.
+
+2. Correct Answer:
+
+4
+Explanation:
+The split() method without any arguments splits the string by whitespace. In this case, 'The quick brown fox' is split into four words: ['The', 'quick', 'brown', 'fox']. The len() function then returns the number of elements in this list, which is 4. It's important to note that split() can also take a delimiter argument to split on specific characters.
+
+3. Correct Answer:
+
+Python-is-awesome
+Explanation:
+The join() method is called on a string (the separator) and takes an iterable (like a list) as an argument. It joins the elements of the iterable using the separator string. In this case, '-'.join(words) joins the words in the list with a hyphen between each word, resulting in 'Python-is-awesome'. This method is often used for efficient string concatenation.
+
+4. Correct Answer:
+
+Hell0, World!
+Explanation:
+The replace() method replaces occurrences of a substring with another substring. It takes three arguments: the substring to replace, the replacement substring, and optionally, the number of replacements to make. In this case, replace('o', '0', 1) replaces the first 'o' with '0'. The third argument '1' limits the replacement to the first occurrence only. Without this argument, all occurrences would be replaced.
+
+5. Correct Answer:
+
+Alice is 30 years old.
+Explanation:
+F-strings, introduced in Python 3.6, provide a concise and readable way to embed expressions inside string literals. The 'f' prefix before the string literal indicates an f-string. Inside the string, expressions enclosed in curly braces {} are evaluated at runtime and their string representations are inserted into the string. In this case, {name} is replaced with 'Alice' and {age} is replaced with 30, resulting in 'Alice is 30 years old.'.
+
+6. Correct Answer:
+
+Bob is 25 years old and Bob likes Python.
+Explanation:
+The .format() method is another way to format strings in Python. In the format string, placeholders are denoted by curly braces {}. Inside the braces, you can specify the index of the argument to be inserted. In this case, {0} refers to the first argument (name) and {1} refers to the second argument (age). The .format(name, age) call then replaces these placeholders with the actual values. Note that {0} is used twice, demonstrating that you can reuse arguments in multiple places.
+
+7. Correct Answer:
+
+3
+Explanation:
+This code uses a regular expression to find all five-letter words in the text. Let's break down the pattern r'\b\w{5}\b':
+- \b represents a word boundary
+- \w represents any word character (letter, digit, or underscore)
+- {5} specifies exactly 5 occurrences of the previous pattern (\w)
+The re.findall() function returns all non-overlapping matches of the pattern in the string. In this text, there are three five-letter words: 'quick', 'brown', and 'jumps'. Therefore, len(matches) returns 3.
+
+8. Correct Answer:
+
+o
+Explanation:
+In Python, string indexing allows accessing individual characters in a string. Positive indices start from 0 at the beginning of the string, while negative indices start from -1 at the end of the string and move backwards. In this case, text[-2] refers to the second-to-last character of the string 'Python', which is 'o'. This negative indexing is particularly useful when you want to access elements from the end of a sequence without knowing its length.
+
+9. Correct Answer:
+
+A TypeError will be raised
+Explanation:
+Strings in Python are immutable, which means they cannot be changed after they are created. When you try to assign a new value to a specific index of a string (text[0] = 'J'), Python raises a TypeError with the message 'str' object does not support item assignment'. To modify a string, you need to create a new string. For example, you could do: text = 'J' + text[1:] to achieve the desired result. Understanding string immutability is crucial for efficient string manipulation in Python.
+
+10. Correct Answer:
+
+Python programming
+Explanation:
+This code demonstrates method chaining, where multiple string methods are called in sequence. Let's break it down:
+1. text.strip() removes leading and trailing whitespace, resulting in 'python programming'
+2. .capitalize() capitalizes the first character, resulting in 'Python programming'
+Method chaining is a powerful technique in Python that allows for concise and readable code when performing multiple operations on a string.
