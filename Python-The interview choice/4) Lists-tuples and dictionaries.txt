@@ -1,0 +1,214 @@
+List Modification
+
+1. What is the output of the following code?
+
+my_list = [1, 2, 3, 4, 5]
+my_list[1:4] = [10, 20]
+print(my_list)
+
+Select one of the following options:
+[1, 10, 20, 4, 5]
+[1, 10, 20, 5]
+[1, 2, 3, 4, 5, 10, 20]
+[1, 10, 20, 3, 4, 5]
+
+2.What is the result of the following code?
+
+a, *b, c = (1, 2, 3, 4, 5)
+print(b)
+
+Select one of the following options:
+[2, 3, 4]
+(2, 3, 4)
+[1, 2, 3, 4, 5]
+Error
+
+3. What is the output of the following code?
+
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+my_dict.update({'b': 20, 'd': 4})
+print(my_dict)
+
+Select one of the following options:
+{'a': 1, 'b': 2, 'c': 3, 'd': 4}
+{'a': 1, 'b': 20, 'c': 3, 'd': 4}
+{'a': 1, 'b': 2, 'c': 3}
+{'a': 1, 'b': 20, 'c': 3}
+
+4. What is the result of the following set operation?
+
+set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
+print(set1 ^ set2)
+
+Select one of the following options:
+{1, 2, 3, 6, 7, 8}
+{4, 5}
+{1, 2, 3, 4, 5, 6, 7, 8}
+{1, 2, 3}
+
+5. What does the following list comprehension produce?
+
+[x*y for x in range(1,3) for y in range(1,3) if x != y]
+
+Select one of the following options:
+[1, 2]
+[2, 2]
+[1, 2, 2]
+[2]
+
+6. What is the output of the following dictionary comprehension?
+
+{x: x**2 for x in range(5) if x % 2 == 0}
+
+Select one of the following options:
+{0: 0, 2: 4, 4: 16}
+{1: 1, 3: 9}
+{0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
+{2: 4, 4: 16}
+
+7. Tuple Immutability
+Which of the following operations will raise an error when performed on a tuple t = (1, 2, 3)?
+
+Select one of the following options:
+t[0]
+t + (4, 5)
+t.count(2)
+t[0] = 0
+
+
+8. What is the output of the following code?
+
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+print(set1.symmetric_difference(set2))
+
+Select one of the following options:
+{1, 2, 5, 6}
+{3, 4}
+{1, 2, 3, 4, 5, 6}
+{1, 2}
+
+9. What is the result of the following code?
+
+my_list = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]
+my_list.sort()
+my_list.reverse()
+print(my_list[0:3])
+
+Select one of the following options:
+[1, 1, 2]
+[9, 6, 5]
+[9, 6, 4]
+[2, 3, 5]
+
+10. What is the output of the following code?
+
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+print(my_dict.pop('b', 0) + my_dict.get('d', 4))
+
+Select one of the following options:
+2
+4
+6
+0
+
+
+
+
+
+1. Correct Answer:
+
+[1, 10, 20, 5]
+Explanation:
+In this code, we're using list slicing to replace elements at indices 1, 2, and 3 with [10, 20]. The slice my_list[1:4] represents elements at indices 1, 2, and 3. When we assign [10, 20] to this slice, it replaces these three elements with the two new elements. As a result, the list shrinks by one element, and the final list becomes [1, 10, 20, 5].
+
+2. Correct Answer:
+
+[2, 3, 4]
+Explanation:
+This is an example of tuple unpacking with the * operator. Here's what happens:
+1. The variable 'a' gets the first value (1)
+2. The variable 'c' gets the last value (5)
+3. The * before 'b' tells Python to pack all remaining values into a list and assign it to 'b'
+Therefore, 'b' becomes [2, 3, 4]. This technique is called 'extended unpacking' and was introduced in Python 3.
+
+3. Correct Answer:
+
+{'a': 1, 'b': 20, 'c': 3, 'd': 4}
+Explanation:
+The update() method in dictionaries is used to update the dictionary with elements from another dictionary or an iterable of key/value pairs. In this case, it updates the value of 'b' to 20 and adds a new key-value pair 'd': 4. Existing keys are updated with new values, and new keys are added to the dictionary. Therefore, the resulting dictionary is {'a': 1, 'b': 20, 'c': 3, 'd': 4}.
+
+4. Correct Answer:
+
+{1, 2, 3, 6, 7, 8}
+Explanation:
+The ^ operator performs a symmetric difference operation on two sets. It returns a set containing elements that are in either set, but not in both. In this case:
+- Elements in set1 but not in set2: {1, 2, 3}
+- Elements in set2 but not in set1: {6, 7, 8}
+Combining these, we get {1, 2, 3, 6, 7, 8}. This operation is equivalent to (set1 - set2) | (set2 - set1).
+
+5. Correct Answer:
+
+[2, 2]
+Explanation:
+This list comprehension can be broken down as follows:
+1. It iterates over x in range(1,3), which is [1, 2]
+2. For each x, it iterates over y in range(1,3), which is also [1, 2]
+3. It only includes x*y if x != y
+So, the combinations are:
+- When x=1, y=2: 1*2 = 2
+- When x=2, y=1: 2*1 = 2
+The result is [2, 2].
+
+6. Correct Answer:
+
+{0: 0, 2: 4, 4: 16}
+Explanation:
+This dictionary comprehension creates key-value pairs where:
+1. The key is x
+2. The value is x**2 (x squared)
+3. x is taken from range(5), which is [0, 1, 2, 3, 4]
+4. Only values where x % 2 == 0 (even numbers) are included
+Therefore, the resulting dictionary contains the even numbers from 0 to 4 as keys, with their squares as values: {0: 0, 2: 4, 4: 16}.
+
+7. Correct Answer:
+
+t[0] = 0
+Explanation:
+Tuples in Python are immutable, which means their contents cannot be changed after creation. Let's examine each option:
+1. t[0]: This is valid. You can access tuple elements by index.
+2. t + (4, 5): This is valid. It creates a new tuple by concatenating two tuples.
+3. t.count(2): This is valid. count() is a method that returns the number of occurrences of an element.
+4. t[0] = 0: This will raise a TypeError. You cannot assign a new value to a tuple element because tuples are immutable.
+Therefore, only the last option will raise an error.
+
+8.  Correct Answer:
+
+{1, 2, 5, 6}
+Explanation:
+The symmetric_difference() method returns a set containing elements that are in either set, but not in both. It's equivalent to using the ^ operator. Here's how it works:
+1. Elements in set1 but not in set2: {1, 2}
+2. Elements in set2 but not in set1: {5, 6}
+3. Combining these: {1, 2, 5, 6}
+This method effectively removes the common elements (3 and 4) and returns the remaining elements from both sets.
+
+9. Correct Answer:
+
+[9, 6, 5]
+Explanation:
+Let's break down the operations:
+1. my_list.sort() sorts the list in ascending order: [1, 1, 2, 3, 3, 4, 5, 5, 6, 9]
+2. my_list.reverse() reverses the sorted list: [9, 6, 5, 5, 4, 3, 3, 2, 1, 1]
+3. my_list[0:3] slices the list from index 0 to 2 (inclusive of 0, exclusive of 3)
+Therefore, the final result is [9, 6, 5], which are the elements from index 0 to 2 of the sorted and reversed list.
+
+10. Correct Answer:
+
+6
+Explanation:
+This code involves two dictionary methods:
+1. pop('b', 0): This removes the key 'b' from the dictionary and returns its value. If 'b' is not found, it returns the default value 0. In this case, 'b' exists, so it returns 2.
+2. get('d', 4): This tries to get the value for key 'd'. Since 'd' doesn't exist in the dictionary, it returns the default value 4.
+The code then adds these two results: 2 + 4 = 6.
+Therefore, the final output is 6.
