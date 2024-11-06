@@ -1,6 +1,6 @@
 # Technical-Round-101
 
-This repository contains a comprehensive collection of technical interview questions and answers tailored for various industries and job roles. Whether you are preparing for a software engineering, data science, or cybersecurity interview, you will find valuable resources to help you excel in your next technical round.
+- This repository contains a comprehensive collection of technical interview questions and answers tailored for various industries and job roles. Whether you are preparing for a software engineering, data science, or cybersecurity interview, you will find valuable resources to help you excel in your next technical round.
 
 ## Repository Structure
 
@@ -24,14 +24,16 @@ This repository contains a comprehensive collection of technical interview quest
 
 ## Contributing
 
-We welcome contributions from the community. If you have a question or answer that you would like to add, please follow the guidelines in the `CONTRIBUTING.md` file.
+- We welcome contributions from the community. If you have a question or answer that you would like to add, please follow the guidelines in the `CONTRIBUTING.md` file.
 
 ## License
 
-This repository is licensed under the MIT License. See the `LICENSE` file for more details.
+- This repository is licensed under the MIT License. See the `LICENSE` file for more details.
 
 ## Acknowledgements
 
-We would like to thank all the contributors who have helped in creating and maintaining this repository. Your efforts are greatly appreciated.
+- We would like to thank all the contributors who have helped in creating and maintaining this repository. Your efforts are greatly appreciated.
 
-Happy studying and good luck with your technical interviews!
+**Happy studying and good luck with your technical interviews!**
+
+
