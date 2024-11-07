@@ -1,0 +1,216 @@
+Function Definition
+
+1.Which of the following is the correct way to define a function named 'greet' that takes no parameters in Python?
+
+Select one of the following options:
+function greet():
+    print('Hello!')
+def greet:
+    print('Hello!')
+def greet():
+    print('Hello!')
+greet() = {
+    print('Hello!')
+}
+
+2. What will be the output of the following code?
+
+def multiply(a, b=2):
+    return a * b
+
+print(multiply(5))
+print(multiply(5, 3))
+
+
+Select one of the following options:
+10
+15
+5
+15
+10
+10
+Error: missing required argument
+
+3. Which of the following lambda expressions is equivalent to the function:
+
+def square(x):
+    return x ** 2
+
+Select one of the following options:
+lambda x: x * x
+lambda x: x ^ 2
+lambda: x ** 2
+lambda x: x + x
+
+4. What will be the output of the following code?
+
+numbers = [1, 2, 3, 4, 5]
+result = list(map(lambda x: x * 2, numbers))
+print(result)
+
+Select one of the following options:
+[2, 4, 6, 8, 10]
+[1, 4, 9, 16, 25]
+[1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
+[1, 2, 3, 4, 5]
+
+5. What will be the output of the following code?
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+result = list(filter(lambda x: x % 2 == 0, numbers))
+print(result)
+
+Select one of the following options:
+[2, 4, 6, 8, 10]
+[1, 3, 5, 7, 9]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[]
+
+
+Select one of the following options:
+[2, 4, 6, 8, 10]
+[1, 3, 5, 7, 9]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+[]
+
+6. What will be the output of the following code?
+
+from functools import reduce
+
+numbers = [1, 2, 3, 4, 5]
+result = reduce(lambda x, y: x * y, numbers)
+print(result)
+
+Select one of the following options:
+15
+120
+5
+1
+
+7. What will be the output of the following code?
+
+def func(a, b, c=3, d=4):
+    print(a, b, c, d)
+
+func(1, *(5,), **{'c': 9})
+
+
+Select one of the following options:
+1 5 9 4
+1 5 3 4
+Error: too many arguments
+1 5 3 9
+
+8. What will be the output of the following code?
+
+def outer(x):
+    def inner(y):
+        return x + y
+    return inner
+
+f = outer(10)
+print(f(5))
+
+Select one of the following options:
+15
+10
+5
+Error: 'x' is not defined
+
+9. What will be the output of the following code?
+
+def greet(name):
+    """This function greets the person passed in as a parameter"""
+    print(f"Hello, {name}!")
+
+print(greet.__doc__)
+
+
+Select one of the following options:
+Hello, __doc__!
+This function greets the person passed in as a parameter
+None
+Error: __doc__ is not defined
+
+
+
+
+Answers:
+
+1. Correct Answer:
+
+def greet():
+    print('Hello!')
+Explanation:
+In Python, functions are defined using the 'def' keyword followed by the function name and parentheses. Even if the function takes no parameters, the parentheses are required. The function body is indented and comes after a colon. The correct syntax is:
+
+```python
+def greet():
+    print('Hello!')
+```
+
+Option 1 is incorrect because Python doesn't use the 'function' keyword. Option 2 is missing parentheses after the function name. Option 4 is using JavaScript-like syntax, which is not valid in Python.
+
+2. Correct Answer:
+
+10
+15
+Explanation:
+This question demonstrates default parameters in Python functions. In the function definition, 'b' has a default value of 2. When the function is called with only one argument (multiply(5)), the default value of 'b' is used, so the result is 5 * 2 = 10. When called with two arguments (multiply(5, 3)), the provided value 3 overrides the default value for 'b', so the result is 5 * 3 = 15. Therefore, the correct output is:
+10
+15
+
+3. Correct Answer:
+
+lambda x: x * x
+Explanation:
+Lambda functions in Python are small anonymous functions that can have any number of arguments but can only have one expression. The correct lambda expression equivalent to the given function is 'lambda x: x * x'. This creates a function that takes one argument 'x' and returns its square.
+
+Option 2 is incorrect because '^' in Python is the bitwise XOR operator, not exponentiation. Option 3 is incorrect because it doesn't take any arguments. Option 4 calculates 2x, not x^2.
+
+4. Correct Answer:
+
+[2, 4, 6, 8, 10]
+Explanation:
+The 'map' function in Python applies a given function to each item in an iterable and returns a map object. In this case, the lambda function 'lambda x: x * 2' is applied to each element in the 'numbers' list. This lambda function multiplies each number by 2. The 'list()' function is then used to convert the map object to a list. Therefore, each number in the original list is doubled, resulting in [2, 4, 6, 8, 10].
+
+5. Correct Answer:
+
+[2, 4, 6, 8, 10]
+Explanation:
+The 'filter' function in Python constructs an iterator from elements of an iterable for which a function returns True. In this case, the lambda function 'lambda x: x % 2 == 0' checks if a number is even (i.e., if it's divisible by 2 with no remainder). This function is applied to each element in the 'numbers' list. The 'list()' function then converts the filter object to a list. Therefore, the result is a list of all even numbers from the original list: [2, 4, 6, 8, 10]
+
+6. Correct Answer:
+
+120
+Explanation:
+The 'reduce' function in Python applies a function of two arguments cumulatively to the items of a sequence, from left to right, so as to reduce the sequence to a single value. In this case, the lambda function 'lambda x, y: x * y' multiplies two numbers. This operation is applied cumulatively to the list [1, 2, 3, 4, 5]. The process works like this:
+1 * 2 = 2
+2 * 3 = 6
+6 * 4 = 24
+24 * 5 = 120
+Therefore, the final result is 120, which is the product of all numbers in the list.
+
+7. Correct Answer:
+
+1 5 9 4
+Explanation:
+This question tests understanding of different ways to pass arguments in Python. In the function call:
+- 1 is passed as a positional argument for parameter 'a'
+- *(5,) unpacks the tuple (5,) and passes 5 as a positional argument for 'b'
+- **{'c': 9} unpacks the dictionary and passes 9 as a keyword argument for 'c'
+- 'd' uses its default value of 4
+
+Therefore, the function receives a=1, b=5, c=9, and d=4, and prints them in that order.
+
+8. Correct Answer:
+
+15
+Explanation:
+This code demonstrates a closure in Python. The outer function returns the inner function, which remembers the value of 'x' from its enclosing scope. When we call outer(10), it returns the inner function with 'x' bound to 10. We assign this returned function to 'f'. So 'f' is now a function that takes one argument 'y' and returns 10 + y. When we call f(5), it's equivalent to inner(5) with x=10, which returns 10 + 5 = 15.
+
+9. Correct Answer:
+
+This function greets the person passed in as a parameter
+Explanation:
+In Python, functions are objects and have attributes. One of these attributes is __doc__, which returns the docstring of the function. A docstring is the string literal that appears as the first statement in a function. It's used to describe what the function does. In this case, the docstring is "This function greets the person passed in as a parameter", so that's what will be printed when we access greet.__doc__. This feature is useful for providing documentation for functions that can be accessed programmatically.
