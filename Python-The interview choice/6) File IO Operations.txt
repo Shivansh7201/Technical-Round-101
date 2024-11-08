@@ -1,0 +1,234 @@
+File Opening Modes
+1. Which of the following is NOT a valid mode for opening a file in Python?
+
+Select one of the following options:
+r
+w
+a
+x
+
+2. Reading File Content
+What is the output of the following code?
+
+with open('example.txt', 'w') as f:
+    f.write('Hello\nWorld')
+
+with open('example.txt', 'r') as f:
+    print(f.read(5))
+
+Select one of the following options:
+Hello
+World
+Hello\n
+Hell
+
+3. File Writing
+Which of the following statements about writing to files in Python is correct?
+
+Select one of the following options:
+The write() method automatically adds a newline character at the end
+The write() method returns the number of characters written
+The writelines() method automatically adds newline characters between list items
+The write() method can only write string data to a file
+
+4. CSV File Handling
+Which module is commonly used for working with CSV files in Python?
+
+Select one of the following options:
+csv
+pandas
+numpy
+json
+
+5. Context Managers
+What is the primary advantage of using a context manager (with statement) when working with files?
+
+Select one of the following options:
+It makes the code run faster
+It automatically closes the file after operations are complete
+It allows multiple files to be opened simultaneously
+It prevents any errors from occurring during file operations
+
+6. File Position
+What does the seek() method do when working with files?
+
+Did you like the problem?
+
+Select one of the following options:
+It searches for a specific string in the file
+It moves the file cursor to a specified position
+It returns the current position of the file cursor
+It skips a specified number of lines in the file
+
+7. File Modes Combination
+What does the file mode 'a+' do when opening a file?
+
+Select one of the following options:
+Opens the file for append only
+Opens the file for reading and writing, creating the file if it doesn't exist
+Opens the file for appending and reading, creating the file if it doesn't exist
+Opens the file for exclusive creation, failing if the file already exists
+
+8. Binary File Handling
+Which of the following is true about binary file operations in Python?
+
+Select one of the following options:
+Binary files can only contain numeric data
+The 'b' mode must be used when opening binary files
+Binary files are always smaller than text files
+Python automatically converts binary data to text when reading
+
+9. File Methods
+What is the difference between the read() and readline() methods when reading a file?
+
+Select one of the following options:
+read() returns the entire file content, while readline() returns one line at a time
+read() is faster than readline() for all file sizes
+readline() can only be used with text files, while read() works with both text and binary files
+read() automatically closes the file after reading, while readline() keeps it open
+
+10. File Writing Modes
+What happens if you open an existing file in 'w' mode and then close it without writing anything?
+
+Select one of the following options:
+The file remains unchanged
+The file is deleted
+The file becomes empty
+An error is raised
+                                             
+Answers:
+
+1. Correct Answer:
+
+x
+Explanation:
+The valid modes for opening a file in Python are:
+'r' - Read (default mode)
+'w' - Write (truncates the file if it exists)
+'a' - Append
+'x' - Exclusive creation (fails if the file already exists)
+'b' - Binary mode
+'t' - Text mode (default)
+'+' - Read and write mode
+
+The 'x' mode is actually a valid mode, but it's less commonly used. It's used for exclusive creation, which means it will create a new file and open it for writing, but if the file already exists, the operation will fail.
+2. Correct Answer:
+
+Hello
+Explanation:
+The code first writes 'Hello\nWorld' to a file named 'example.txt'. Then it opens the same file in read mode and uses the read(5) method. This method reads and returns the first 5 characters from the file. In this case, it will return 'Hello', which is then printed. The \n (newline) character is considered as a single character in the file content.
+
+3. Correct Answer:
+
+The write() method returns the number of characters written
+Explanation:
+The correct statement is that the write() method returns the number of characters written. Here are explanations for each option:
+1. The write() method does not automatically add a newline character. You need to explicitly add '\n' if you want a newline.
+2. This is correct. The write() method returns the number of characters written to the file.
+3. The writelines() method does not automatically add newline characters. It simply writes the strings in the given list to the file.
+4. While it's true that write() can only write string data, this isn't the most correct answer among the options given. Also, you can write other data types by converting them to strings first.
+                                                                                                   
+4. Correct Answer:
+
+csv
+Explanation:
+The 'csv' module is the built-in Python module specifically designed for working with CSV (Comma Separated Values) files. It provides functionality to read from and write to CSV files easily.
+
+While other options like pandas can also handle CSV files (and often with more advanced features), the csv module is the most basic and commonly used for simple CSV operations in Python.
+
+The 'numpy' module is primarily used for numerical computations, and 'json' is used for JSON data, not CSV.
+
+5. Correct Answer:
+
+It automatically closes the file after operations are complete
+Explanation:
+The primary advantage of using a context manager (with statement) when working with files is that it automatically closes the file after the operations are complete, even if an exception occurs.
+
+This ensures that system resources are properly managed and released. Without a context manager, you would need to explicitly close the file using the close() method, which might be forgotten or not executed if an exception occurs.
+
+Context managers don't necessarily make the code run faster, don't inherently allow multiple files to be opened (though you can use multiple with statements), and while they help manage resources properly, they don't prevent all possible errors during file operations.
+                                                                                                                                                                                                            
+6. Correct Answer:
+
+It moves the file cursor to a specified position
+Explanation:
+The seek() method is used to move the file cursor (also known as the file pointer) to a specified position in the file. This allows you to read from or write to a specific location in the file.
+
+The basic syntax is file.seek(offset, whence), where offset is the number of bytes to move the cursor, and whence is the reference point for the offset. The whence parameter can be:
+0 (default): Beginning of the file
+1: Current file position
+2: End of the file
+
+For example, file.seek(0) moves the cursor to the beginning of the file.
+
+It's important to note that seek() doesn't search for content or skip lines; it simply moves the cursor based on byte positions.
+                                                                                   
+7. Correct Answer:
+
+Opens the file for appending and reading, creating the file if it doesn't exist
+Explanation:
+The file mode 'a+' opens the file for both appending and reading, and it will create the file if it doesn't exist.
+
+Here's a breakdown of what 'a+' does:
+- 'a': This part stands for append mode. It positions the file pointer at the end of the file.
+- '+': This modifier opens the file for updating (both reading and writing).
+
+When you open a file with 'a+' mode:
+1. If the file exists, the pointer is positioned at the end of the file. Any write operations will add data to the end of the file.
+2. If the file doesn't exist, it creates a new file for reading and writing.
+3. You can read from the file, but note that the file pointer starts at the end of the file.
+
+It's different from 'w+' mode, which would truncate an existing file, while 'a+' preserves the existing content.
+
+8. Correct Answer:
+
+The 'b' mode must be used when opening binary files
+Explanation:
+The correct statement is that the 'b' mode must be used when opening binary files.
+
+When working with binary files in Python:
+1. You need to add 'b' to the mode when opening the file, e.g., 'rb' for reading binary, 'wb' for writing binary.
+2. Binary files can contain any type of data, not just numeric data. They store data in its raw format without any encoding.
+3. Binary files are not always smaller than text files. It depends on the content and any compression used.
+4. Python does not automatically convert binary data to text. When you read from a binary file, you get bytes objects, which you may need to decode if they represent text.
+
+Using the 'b' mode is crucial because it tells Python to handle the file contents as raw bytes without any text encoding or newline translation.
+  
+9. Correct Answer:
+
+read() returns the entire file content, while readline() returns one line at a time
+Explanation:
+The main difference is that read() returns the entire file content, while readline() returns one line at a time.
+
+Here's a more detailed explanation:
+- read(): This method reads the entire file and returns it as a single string (for text files) or bytes object (for binary files). You can optionally specify a size parameter to limit the number of bytes read.
+- readline(): This method reads and returns one line from the file, including the newline character at the end.
+
+Other points to note:
+- Both methods can be used with text and binary files (with appropriate file modes).
+- Neither method automatically closes the file; you need to close it explicitly or use a context manager.
+- The efficiency of read() vs. readline() depends on the use case and file size. For small files, read() might be faster, but for large files or when you need to process line by line, readline() can be more memory-efficient.
+
+Often, for line-by-line processing, a for loop is used:
+```python
+with open('file.txt', 'r') as f:
+    for line in f:
+        # process line
+```
+This is generally the most efficient way to read lines from a file.
+                                                                                                                                                                                      
+10. Correct Answer:
+
+The file becomes empty
+Explanation:
+When you open an existing file in 'w' (write) mode, the file is immediately truncated (emptied) as soon as it's opened, even if you don't write anything to it.
+
+Here's what happens step by step:
+1. The file is opened in 'w' mode.
+2. The existing content of the file is discarded, and the file length is set to 0.
+3. If you don't write anything and then close the file, it remains empty.
+
+This behavior is why you need to be careful when using 'w' mode with existing files. If you want to add to an existing file without deleting its contents, you should use 'a' (append) mode instead.
+
+If you want to write to a file only if it doesn't already exist, you can use 'x' (exclusive creation) mode, which will raise a FileExistsError if the file already exists.
+                                                                                                                                                       
