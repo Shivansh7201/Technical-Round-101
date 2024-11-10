@@ -1,0 +1,158 @@
+Module Import Syntax
+1. Which of the following is the correct syntax to import a module named 'mymodule' in Python?
+Select one of the following options:
+import mymodule
+include mymodule
+using mymodule
+require mymodule
+
+Correct Answer:
+
+import mymodule
+Explanation:
+In Python, the correct syntax to import a module is 'import module_name'. The 'import' keyword is used to bring in external modules or packages. The other options are not valid Python syntax for importing modules. 'include' is used in languages like C/C++, 'using' is used in C#, and 'require' is used in languages like Ruby or Node.js.
+
+2.  Importing Specific Functions
+How can you import only the 'sqrt' function from the 'math' module?
+
+Select one of the following options:
+import math.sqrt
+from math import sqrt
+include sqrt from math
+using math.sqrt
+
+Correct Answer:
+
+from math import sqrt
+Explanation:
+To import a specific function from a module in Python, you use the 'from module_name import function_name' syntax. This allows you to use the function directly without prefixing it with the module name. In this case, 'from math import sqrt' is the correct way to import only the 'sqrt' function from the 'math' module.
+
+
+3. Creating Custom Modules
+What file extension should a Python module have?
+
+Select one of the following options:
+.py
+.module
+.pyc
+.pym.
+
+Correct Answer:
+
+.py
+Explanation:-
+Python modules are simply Python files and should have the '.py' extension. When you create a custom module, you save it as a .py file. The '.pyc' extension is for compiled Python files, '.module' is not a standard Python extension, and '.pym' is not used in Python. 
+
+4. Package Structure
+What file must be present in a directory for Python to treat it as a package?
+
+Select one of the following options:
+__package__.py
+__main__.py
+__init__.py
+package.py
+
+Correct Answer:
+
+__init__.py
+Explanation:
+For Python to treat a directory as a package, it must contain a file named '__init__.py'. This file can be empty, but it must exist. When a package is imported, this '__init__.py' file is implicitly executed, and it is used to initialize the package. The other options are not special files recognized by Python for package initialization.
+
+5. Relative Imports
+Which of the following is a correct syntax for a relative import in Python?
+
+Select one of the following options:
+import ..mymodule
+from .. import mymodule
+import .mymodule
+using ..mymodule
+
+Correct Answer:
+
+from .. import mymodule
+Explanation:
+Relative imports in Python use dots to indicate the current and parent packages. The syntax 'from .. import mymodule' is correct for importing 'mymodule' from the parent package. One dot (.) refers to the current package, while two dots (..) refer to the parent package. The 'import' keyword is still used, but 'from' is added to specify the relative path.
+
+6. OS Module Usage
+Which of the following is NOT a function in Python's 'os' module?
+
+Select one of the following options:
+os.getcwd()
+os.chdir()
+os.mkdir()
+os.execute()
+
+Correct Answer:
+
+os.execute()
+Explanation:
+The 'os' module in Python provides functions for interacting with the operating system. 'os.getcwd()' gets the current working directory, 'os.chdir()' changes the current working directory, and 'os.mkdir()' creates a new directory. However, 'os.execute()' is not a function in the 'os' module. For executing commands, you would typically use 'os.system()' or functions from the 'subprocess' module.
+
+7. Sys Module Functionality
+What does 'sys.path' represent in Python's 'sys' module?
+
+Select one of the following options:
+The path of the current script
+The list of directories Python searches for modules
+The system's environment variables
+The path to the Python interpreter
+
+Correct Answer:
+
+The list of directories Python searches for modules
+Explanation:
+In Python's 'sys' module, 'sys.path' is a list of strings that specifies the search path for modules. When you import a module, Python looks for it in the directories listed in sys.path. This list typically includes the current directory, PYTHONPATH, and installation-dependent defaults. Understanding sys.path is crucial for troubleshooting import issues and for adding custom directories to the Python module search path.
+
+8. Module Reloading
+How can you reload a module that has already been imported in Python?
+
+Select one of the following options:
+reload(module_name)
+import module_name again
+from importlib import reload; reload(module_name)
+module_name.reload()
+
+Correct Answer:
+
+from importlib import reload; reload(module_name)
+Explanation:
+To reload a module that has already been imported in Python, you need to use the 'reload()' function from the 'importlib' module. The correct syntax is:
+```python
+from importlib import reload
+reload(module_name)
+```
+This is useful when you've made changes to a module and want to apply those changes without restarting the Python interpreter. Simply importing the module again (option 2) won't reload it, and options 1 and 4 are 
+not valid Python syntax for reloading modules.
+
+9. Package Initialization
+What happens when you import a package in Python?
+
+Select one of the following options:
+All modules in the package are automatically imported
+The __init__.py file in the package is executed
+Nothing happens until you import specific modules from the package
+The package's setup.py file is executed
+
+Correct Answer:
+
+The __init__.py file in the package is executed
+Explanation:
+When you import a package in Python, the __init__.py file in the package directory is executed. This file can be used to initialize the package, set up package-level variables, or perform any necessary setup. It doesn't automatically import all modules in the package, nor does it require you to import specific modules first. The setup.py file is related to package distribution, not package initialization when imported.
+
+10. Circular Imports
+What is the best way to handle circular imports in Python?
+
+Select one of the following options:
+It's not possible to have circular imports in Python
+Use 'from module import *' in both modules
+Move the imports to the end of the file
+Restructure your code to avoid circular dependencies
+
+Correct Answer:
+
+Restructure your code to avoid circular dependencies
+Explanation:
+Circular imports occur when two modules import each other, which can lead to various issues. The best practice is to restructure your code to avoid circular dependencies altogether. This often involves creating a third module that both can import, or moving shared functionality to a common parent module. While moving imports to the end of the file can sometimes work as a temporary fix, it's not a robust solution. Using 'from module import *' can make the problem worse by polluting the namespace. Circular imports are possible in Python, but they should be avoided for clean and maintainable code.
+
+
+
