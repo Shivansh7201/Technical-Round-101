@@ -1,0 +1,207 @@
+Basic Exception Handling
+1. What is the purpose of the following code block?
+
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print('Cannot divide by zero')
+
+Select one of the following options:
+To perform division
+To handle division by zero error
+To print a message
+To define a function
+
+Correct Answer:
+
+To handle division by zero error
+Explanation:
+This code block demonstrates basic exception handling in Python. The try block attempts to perform a division by zero operation, which would normally raise a ZeroDivisionError. The except block catches this specific error and prints a custom message instead of allowing the program to crash. This is a fundamental concept in exception handling, allowing graceful handling of anticipated errors.
+
+2. Multiple Exception Types
+Which of the following is the correct way to handle multiple exception types in Python?
+
+Select one of the following options:
+try:
+    # code
+except (TypeError, ValueError):
+    # handle exceptions
+try:
+    # code
+except TypeError, ValueError:
+    # handle exceptions
+try:
+    # code
+except TypeError or ValueError:
+    # handle exceptions
+try:
+    # code
+except TypeError and ValueError:
+    # handle exceptions
+
+Correct Answer:
+
+try:
+    # code
+except (TypeError, ValueError):
+    # handle exceptions
+Explanation:
+The correct way to handle multiple exception types in Python is to group them in parentheses after the except keyword. This allows you to handle multiple exception types with the same code block. The syntax `except (TypeError, ValueError):` is correct and efficient, as it catches either TypeError or ValueError. The other options are either syntactically incorrect or do not achieve the desired result of handling multiple exceptions.
+
+3. Raising Exceptions
+What is the output of the following code?
+
+def validate_age(age):
+    if age < 0:
+        raise ValueError('Age cannot be negative')
+    return age
+
+try:
+    validate_age(-5)
+except ValueError as e:
+    print(str(e))
+
+Select one of the following options:
+
+Age cannot be negative
+ValueError: Age cannot be negative
+-5
+None
+
+Correct Answer:
+
+Age cannot be negative
+Explanation:
+This code demonstrates raising and catching a custom exception. The `validate_age` function raises a ValueError with a custom message if the age is negative. In the try block, we call this function with a negative age. The raised exception is caught in the except block, where we print the exception message using `str(e)`. The output will be the string 'Age cannot be negative', which is the message we specified when raising the exception. This showcases how to raise exceptions with custom messages and handle them appropriately.
+
+4. Custom Exceptions
+Which of the following is the correct way to define a custom exception in Python?
+
+Select one of the following options:
+class CustomError(Exception):
+    pass
+class CustomError(Error):
+    pass
+class CustomError:
+    pass
+def CustomError(Exception):
+    pass
+
+Correct Answer:
+
+class CustomError(Exception):
+    pass
+Explanation:
+In Python, custom exceptions are created by defining a new class that inherits from the built-in Exception class or any of its subclasses. The correct way to define a custom exception is `class CustomError(Exception): pass`. This creates a new exception type called CustomError that inherits all the properties of the Exception class. You can then raise this custom exception using `raise CustomError()`. The other options are either incorrect (Error is not a built-in class) or do not create a proper exception class.
+
+5. Finally Clause
+What is the purpose of the 'finally' clause in a try-except block?
+
+Select one of the following options:
+To define the main code to be executed
+To handle exceptions that were not caught by except blocks
+To execute code regardless of whether an exception occurred or not
+To terminate the program execution
+
+Correct Answer:
+
+To execute code regardless of whether an exception occurred or not
+Explanation:
+The 'finally' clause in a try-except block is used to define a block of code that will be executed regardless of whether an exception occurred or not. It's typically used for cleanup operations that should be performed under all circumstances, such as closing files or releasing resources. The finally block is executed after the try and except blocks, even if an exception was raised and not handled, or if a return, continue, or break statement is executed in the try or except blocks. This ensures that certain cleanup or finalization code always runs, improving resource management and code reliability.
+
+6. Exception Hierarchy
+Which of the following is true about Python's exception hierarchy?
+
+Select one of the following options:
+All exceptions inherit from the Error class
+All exceptions inherit from the BaseException class
+All exceptions inherit from the Exception class
+Python does not have an exception hierarchy
+
+Correct Answer:
+
+All exceptions inherit from the BaseException class
+Explanation:
+In Python, all exceptions are instances of classes that derive from BaseException. Most built-in exceptions are derived from Exception, which in turn is derived from BaseException. The hierarchy is as follows: BaseException is the base class for all built-in exceptions. Exception is derived from BaseException and is the base class for all built-in non-system-exiting exceptions. Specific exceptions like ValueError, TypeError, etc., are derived from Exception. Understanding this hierarchy is important for creating custom exceptions and for properly catching and handling exceptions in your code.
+
+7. Bare Except
+What is the potential issue with the following code?
+
+try:
+    # some code
+except:
+    print('An error occurred')
+
+Select one of the following options:
+It will not catch any exceptions
+It will only catch TypeError
+It will catch all exceptions, including KeyboardInterrupt and SystemExit
+It will raise a SyntaxError
+
+Correct Answer:
+
+It will catch all exceptions, including KeyboardInterrupt and SystemExit
+Explanation:
+This code uses a bare except clause, which catches all exceptions, including those that might not be intended to be caught, such as KeyboardInterrupt and SystemExit. This is generally considered bad practice because it can mask errors, make debugging difficult, and catch exceptions that should be allowed to propagate. It's better to catch specific exceptions or, if you must catch all exceptions, use `except Exception:` instead. This will catch all standard exceptions but allow system-exiting exceptions to propagate. Always be as specific as possible when catching exceptions to ensure your error handling is precise and doesn't interfere with important system operations.
+
+8. Exception Object
+How can you access the details of a caught exception in Python?
+
+Select one of the following options:
+By using the 'as' keyword in the except statement
+By calling a method on the except statement
+By using a global variable
+Exceptions don't provide additional details
+
+Correct Answer:
+
+By using the 'as' keyword in the except statement
+Explanation:
+In Python, you can access the details of a caught exception by using the 'as' keyword in the except statement. For example: `except ValueError as e:`. This assigns the exception object to the variable 'e', allowing you to access its attributes and methods. Most exception objects have a 'args' attribute that contains the arguments passed to the exception constructor, and many have additional attributes with more specific information. For instance, you can use `str(e)` to get the exception message. This feature is crucial for logging, debugging, and providing informative error messages to users.
+
+9. Nested Try-Except
+What will be the output of the following code?
+
+try:
+    try:
+        raise ValueError('Inner exception')
+    except ValueError as e:
+        print('Inner:', str(e))
+        raise
+except ValueError as e:
+    print('Outer:', str(e))
+
+Select one of the following options:
+Inner: Inner exception
+Outer: Inner exception
+Inner: Inner exception
+Outer: Inner exception
+ValueError: Inner exception
+
+Correct Answer:
+
+Inner: Inner exception
+Outer: Inner exception
+Explanation:
+This code demonstrates nested try-except blocks and re-raising exceptions. The inner try block raises a ValueError, which is caught by the inner except block. This block prints 'Inner: Inner exception'. Then, it re-raises the same exception using the 'raise' statement without arguments. This propagates the exception to the outer try-except block, which catches it and prints 'Outer: Inner exception'. The final output is both messages printed on separate lines. This pattern is useful when you want to handle an exception at multiple levels, performing different actions at each level while allowing the exception to propagate.
+
+10. Else Clause in Try-Except
+What is the purpose of the 'else' clause in a try-except block?
+
+Select one of the following options:
+To handle exceptions not caught by the except block
+To execute code if no exception occurs
+To define an alternative to the try block
+To specify a default exception type
+
+Correct Answer:
+
+To execute code if no exception occurs
+Explanation:
+The 'else' clause in a try-except block is used to specify code that should be executed if no exception occurs in the try block. It provides a clear separation between the code that might raise an exception and the code that should run only if no exception was raised. This is useful for improving code readability and for cases where you want to perform certain actions only if the try block executes successfully. The else block is executed after the try block completes normally, but before the finally block (if present). It's important to note that if an exception occurs in the try block, the else block will not be executed.
+
+
+
+
+
+
