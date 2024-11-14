@@ -1,0 +1,157 @@
+Timedelta Calculation
+1. What will be the output of the following code?
+
+from datetime import datetime, timedelta
+
+date1 = datetime(2023, 5, 1)
+date2 = datetime(2023, 5, 15)
+delta = date2 - date1
+print(delta.days)
+
+Select one of the following options:
+14
+15
+16
+30
+
+Correct Answer:
+
+14
+Explanation:
+The code calculates the difference between two datetime objects using the timedelta class. The result is stored in the 'delta' variable. The 'days' attribute of timedelta gives the number of days between the two dates. In this case, the difference between May 15 and May 1 is 14 days.
+
+2. Random Sampling
+Which method from the random module would you use to select a random sample of 3 items from a list without replacement?
+
+Select one of the following options:
+random.choice()
+random.sample()
+random.shuffle()
+random.randint()
+
+Correct Answer:
+
+random.sample()
+Explanation:
+The random.sample() method is used to return a list of unique elements chosen from the sequence. It allows you to specify the sample size and ensures that each item can only be selected once (without replacement). random.choice() selects a single random element, random.shuffle() reorders the sequence in place, and random.randint() returns a random integer within a specified range.
+
+3. Math Function
+What is the output of the following code?
+
+import math
+
+print(math.ceil(3.1))
+
+Select one of the following options:
+3
+3.1
+4
+3.0
+
+Correct Answer:
+
+4
+Explanation:
+The math.ceil() function returns the smallest integer greater than or equal to the given number. In this case, math.ceil(3.1) returns 4, as 4 is the smallest integer greater than 3.1. This function is useful when you need to round up a float to the nearest integer.
+
+4. Collections Counter
+What will be the output of the following code?
+
+from collections import Counter
+
+c = Counter('abracadabra')
+print(c.most_common(2))
+
+Correct Answer:
+
+[('a', 5), ('b', 2)]
+Explanation:
+The Counter class from the collections module is used to count hashable objects. The most_common() method returns a list of the n most common elements and their counts, sorted by count (descending order). In this case, 'a' appears 5 times and 'b' appears 2 times, which are the two most common characters in 'abracadabra'.
+
+5. Datetime Formatting
+Which of the following code snippets will correctly format the date '2023-05-15' as 'May 15, 2023'?
+
+Select one of the following options:
+datetime.strptime('2023-05-15', '%Y-%m-%d').strftime('%B %d, %Y')
+datetime.strftime('2023-05-15', '%B %d, %Y')
+datetime.strptime('2023-05-15', '%B %d, %Y')
+datetime.strftime('2023-05-15', '%Y-%m-%d')
+Hooray, you did it!
+
+Correct Answer:
+
+datetime.strptime('2023-05-15', '%Y-%m-%d').strftime('%B %d, %Y')
+Explanation:
+To format a date string, you first need to parse it into a datetime object using strptime(), then format it to the desired output using strftime(). The correct approach is to use strptime() with the input format '%Y-%m-%d' to create a datetime object, then use strftime() with the output format '%B %d, %Y' to get the desired string representation.
+
+6. Random Seed
+What is the purpose of using random.seed() in Python's random module?
+
+Select one of the following options:
+To generate truly random numbers
+To reset the random number generator
+To create a new random number generator
+To produce a repeatable sequence of random numbers
+
+Correct Answer:
+
+To produce a repeatable sequence of random numbers
+Explanation:
+The random.seed() function is used to initialize the random number generator. When you provide a seed value, it ensures that the same sequence of random numbers is generated each time the program is run with that seed. This is useful for creating reproducible results in simulations or testing scenarios where you need consistent 'random' behavior.
+
+7. Math Constants
+Which constant in the math module represents the ratio of a circle's circumference to its diameter?
+
+Select one of the following options:
+math.e
+math.pi
+math.tau
+math.inf
+
+Correct Answer:
+
+math.pi
+Explanation:
+math.pi represents the mathematical constant π (pi), which is the ratio of a circle's circumference to its diameter, approximately equal to 3.14159. math.e is Euler's number, math.tau is 2π, and math.inf represents positive infinity.
+
+8. Collections deque
+What is the primary advantage of using collections.deque over a regular list for queue operations?
+
+Select one of the following options:
+It uses less memory
+It supports more methods
+It has O(1) time complexity for append and pop operations at both ends
+It is thread-safe
+
+Correct Answer:
+
+It has O(1) time complexity for append and pop operations at both ends
+Explanation:
+The collections.deque (double-ended queue) provides O(1) time complexity for append and pop operations at both ends of the queue. This makes it more efficient than a regular list for queue operations, especially when you need to add or remove elements from the beginning of the collection frequently. Lists have O(n) time complexity for insertions and deletions at the beginning, as all subsequent elements need to be shifted.
+
+9. Datetime Timezones
+How can you create a timezone-aware datetime object for New York time?
+
+Select one of the following options:
+datetime.now(tz=timezone('America/New_York'))
+datetime.now().astimezone('America/New_York')
+datetime.now(timezone='America/New_York')
+datetime.now().replace(tzinfo='America/New_York')
+
+Correct Answer:
+
+datetime.now(tz=timezone('America/New_York'))
+Explanation:
+To create a timezone-aware datetime object, you need to use the pytz library along with the datetime module. The correct way is to pass a timezone object to the tz parameter of datetime.now(). The timezone object is created using pytz.timezone('America/New_York'). This ensures that the datetime object is created with the correct timezone information for New York.
+
+
+
+
+
+
+
+
+
+
+
+
