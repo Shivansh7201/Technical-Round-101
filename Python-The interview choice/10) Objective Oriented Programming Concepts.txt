@@ -1,0 +1,159 @@
+Class Definition
+1. Which of the following is the correct way to define a class in Python?
+
+Select one of the following options:
+class MyClass():
+def MyClass():
+class MyClass:
+MyClass = class():
+
+Correct Answer:
+
+class MyClass:
+Explanation:
+In Python, a class is defined using the 'class' keyword followed by the class name and a colon. The correct syntax is 'class MyClass:'. The parentheses are optional and can be used to specify base classes for inheritance. The 'def' keyword is used for defining functions, not classes. The last option is incorrect syntax for class definition in Python.
+
+2. Object Creation
+How do you create an object of a class named 'MyClass'?
+
+Select one of the following options:
+obj = MyClass
+obj = new MyClass()
+obj = MyClass()
+obj = create MyClass()
+
+Correct Answer:
+
+obj = MyClass()
+Explanation:
+In Python, objects are created by calling the class name as if it were a function. The correct way to create an object of 'MyClass' is 'obj = MyClass()'. The first option would assign the class itself to 'obj', not an instance. The second option uses 'new' keyword which is not used in Python for object creation. The fourth option is incorrect syntax in Python.
+
+
+3. Inheritance Syntax
+Which of the following correctly demonstrates inheritance in Python?
+
+Select one of the following options:
+class Child inherits Parent:
+class Child(Parent):
+class Child extends Parent:
+class Child : Parent
+
+Correct Answer:
+
+class Child(Parent):
+Explanation:
+In Python, inheritance is specified by placing the parent class name in parentheses after the child class name. The correct syntax is 'class Child(Parent):'. The other options are either incorrect Python syntax or syntax from other programming languages (like Java or C#) that are not used in Python for inheritance.
+
+4. Encapsulation
+Which of the following is used to indicate a private attribute in Python?
+
+Select one of the following options:
+private attribute
+_attribute
+__attribute
+private: attribute
+
+Correct Answer:
+
+__attribute
+Explanation:
+In Python, there's no strict privacy like in some other languages. However, the convention is to use double underscores (__) before an attribute name to indicate it should be treated as private. This triggers name mangling, making the attribute harder to access from outside the class. Single underscore (_) is used for protected attributes. The other options are either not Python syntax or don't provide any encapsulation.
+
+5. Polymorphism
+Which of the following best describes polymorphism in Python?
+
+Select one of the following options:
+The ability to create multiple objects
+The ability to inherit from multiple classes
+The ability of objects to respond to the same method in different ways
+The ability to define multiple methods with the same name in a class
+
+Correct Answer:
+
+The ability of objects to respond to the same method in different ways
+Explanation:
+Polymorphism in Python refers to the ability of different objects to respond to the same method call in ways specific to their individual types. This allows for more flexible and reusable code. It's often achieved through method overriding in inheritance. The other options describe different concepts: object creation, multiple inheritance, and method overloading (which Python doesn't support in the traditional sense).
+
+6. Magic Methods
+Which of the following is a magic method in Python?
+Select one of the following options:
+__init__()
+init()
+_init_()
+initialize()
+
+Correct Answer:
+
+__init__()
+Explanation:
+Magic methods in Python, also known as dunder methods, are special methods that have double underscores before and after their names. __init__() is a magic method used for initializing newly created objects. It's called automatically when an object is created. The other options are either not Python syntax or are not magic methods.
+
+7. Method Overriding
+What happens when a method in a child class has the same name as a method in its parent class?
+
+Select one of the following options:
+It results in a syntax error
+The child's method overrides the parent's method
+Both methods are called simultaneously
+The parent's method is always called instead of the child's
+
+Correct Answer:
+
+The child's method overrides the parent's method
+Explanation:
+When a child class defines a method with the same name as a method in its parent class, it overrides the parent's method. This is a key aspect of polymorphism in object-oriented programming. When the method is called on an instance of the child class, the child's version of the method will be executed instead of the parent's. This allows child classes to provide specific implementations of methods defined in their parent classes.
+
+8. Self Parameter
+What is the purpose of the 'self' parameter in Python class methods?
+
+Select one of the following options:
+It's a keyword that defines the method as belonging to the class
+It's used to refer to the current instance of the class
+It's used to create new instances of the class
+It's a placeholder and doesn't serve any purpose
+
+Correct Answer:
+
+It's used to refer to the current instance of the class
+Explanation:
+In Python, the 'self' parameter in class methods refers to the current instance of the class. It's used to access variables and methods associated with that instance. When a method is called on an object, Python automatically passes the object as the first argument to the method. By convention, this parameter is named 'self', although you could technically use any valid variable name. 'self' is not a Python keyword, but a widely adopted convention.
+
+9. Class Variables vs Instance Variables
+What is the difference between a class variable and an instance variable in Python?
+
+Select one of the following options:
+There is no difference
+Class variables are defined inside methods, instance variables are defined in the class body
+Class variables are shared by all instances, instance variables are unique to each instance
+Class variables are unique to each instance, instance variables are shared by all instances
+
+Correct Answer:
+
+Class variables are shared by all instances, instance variables are unique to each instance
+Explanation:
+In Python, class variables are shared by all instances of a class, while instance variables are unique to each instance. Class variables are typically defined in the class body, outside of any methods, and are accessed using the class name or through instances. Instance variables are usually defined inside methods (often in __init__) and are accessed through instance names. This distinction allows for shared state across all instances (class variables) and instance-specific state (instance variables).
+
+10.  Property Decorator
+What is the purpose of the @property decorator in Python?
+
+Select one of the following options:
+To define a new property for the class
+To make a method behave like an attribute
+To make an attribute private
+To define a static method
+
+Correct Answer:
+
+To make a method behave like an attribute
+Explanation:
+The @property decorator in Python is used to define a method that can be accessed like an attribute, without the need for parentheses. This allows you to implement properties, which can have getter, setter, and deleter methods. Properties provide a way to customize access to instance attributes, enabling additional processing when an attribute is accessed, set, or deleted. This is a powerful feature for encapsulation, allowing you to change the internal implementation of a class without changing its public interface.
+
+
+
+
+
+
+
+
+
+
