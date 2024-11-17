@@ -1,0 +1,162 @@
+1. Indentation Rule
+According to PEP 8, what is the recommended indentation size for Python code?
+
+Select one of the following options:
+2 spaces
+4 spaces
+8 spaces
+1 tab
+
+Correct Answer:
+
+4 spaces
+Explanation:
+PEP 8 recommends using 4 spaces per indentation level. This provides a good balance between readability and compact code. While tabs can be used, spaces are preferred for consistency across different editors and platforms. Using 4 spaces also aligns well with most IDEs' default settings for Python.
+
+2. Naming Convention for Functions
+Which of the following function names adheres to PEP 8 naming conventions?
+
+Select one of the following options:
+calculateArea
+Calculate_Area
+calculate_area
+CALCULATE_AREA
+
+Correct Answer:
+
+calculate_area
+Explanation:
+PEP 8 recommends using lowercase letters for function names, with words separated by underscores. This style is called 'snake_case'. It enhances readability and distinguishes function names from class names (which use CapWords convention). The correct option 'calculate_area' follows this convention, making the code more consistent and easier to read.
+
+3. Maximum Line Length
+What is the maximum line length recommended by PEP 8 for Python code?
+
+Select one of the following options:
+79 characters
+80 characters
+100 characters
+120 characters
+
+Correct Answer:
+
+79 characters
+Explanation:
+PEP 8 recommends limiting all lines to a maximum of 79 characters for code, and 72 for flowing long blocks of text (docstrings or comments). This ensures that the code is readable on small displays and allows for side-by-side viewing of code. However, it's worth noting that some teams choose to increase this limit to 100 or 120 characters, especially when working on modern widescreen displays.
+
+4. Import Statement Formatting
+According to PEP 8, which of the following is the correct way to format multiple imports?
+
+Select one of the following options:
+import os, sys, math
+import os; import sys; import math
+import os
+import sys
+import math
+from os, sys, math import *
+
+Correct Answer:
+
+import os
+import sys
+import math
+Explanation:
+PEP 8 recommends putting each import statement on a separate line. This improves readability and makes it easier to add or remove imports. The correct format is:
+```python
+import os
+import sys
+import math
+```
+It's also worth noting that PEP 8 discourages the use of wildcard imports (from module import *) as they can lead to namespace pollution and make it unclear which names are present in the namespace.
+
+5. Class Naming Convention
+Which of the following class names follows PEP 8 naming conventions?
+
+Select one of the following options:
+user_account
+UserAccount
+userAccount
+User_Account
+
+Correct Answer:
+
+UserAccount
+Explanation:
+PEP 8 recommends using the CapWords (or CamelCase) convention for class names. This means that each word in the class name should start with a capital letter, and there should be no underscores between words. Therefore, 'UserAccount' is the correct format. This convention helps distinguish class names from function and variable names, which use lowercase with underscores.
+
+6. Variable Naming Convention
+According to PEP 8, which of the following is the correct naming convention for a constant in Python?
+
+Select one of the following options:
+MAX_VALUE
+maxValue
+max_value
+MaxValue
+
+Correct Answer:
+
+MAX_VALUE
+Explanation:
+PEP 8 recommends using all capital letters for constants in Python, with words separated by underscores. This convention helps distinguish constants from variables and functions, making the code more readable. Constants are typically defined at the module level and are not meant to be changed during the program's execution. Therefore, 'MAX_VALUE' is the correct format for a constant according to PEP 8.
+
+7. Whitespace in Expressions
+Which of the following expressions adheres to PEP 8 guidelines for whitespace usage?
+
+elect one of the following options:
+x=y+1
+x = y + 1
+x =y + 1
+x= y+1
+
+Correct Answer:
+
+x = y + 1
+Explanation:
+PEP 8 recommends using a single space around binary operators. This includes assignment operators (=) and arithmetic operators (+, -, *, /, etc.). The correct format is 'x = y + 1'. This improves readability by clearly separating the different parts of the expression. It's important to note that there are some exceptions to this rule, such as when indicating precedence in complex expressions, but in general, consistent spacing makes the code easier to read and understand.
+
+8. Comment Formatting
+According to PEP 8, what is the correct way to format a single-line comment in Python?
+
+Select one of the following options:
+#This is a comment
+# This is a comment
+#This is a comment#
+// This is a comment
+
+Correct Answer:
+
+# This is a comment
+Explanation:
+PEP 8 recommends starting a comment with a # and a single space. The correct format is '# This is a comment'. This convention improves readability by clearly separating the comment from the code and making it easier to distinguish. It's also worth noting that comments should be complete sentences and that inline comments should be used sparingly. PEP 8 suggests using two spaces before an inline comment.
+
+
+9. Function Argument Formatting
+Which of the following function definitions adheres to PEP 8 guidelines for argument formatting?
+
+Select one of the following options:
+def function(arg1,arg2,arg3):
+def function(arg1, arg2, arg3):
+def function( arg1, arg2, arg3 ):
+def function(arg1,  arg2,  arg3):
+You got it right!
+
+Correct Answer:
+
+def function(arg1, arg2, arg3):
+Explanation:
+PEP 8 recommends using a space after the comma in function arguments, but not before the comma. There should also be no space immediately inside the parentheses. The correct format is 'def function(arg1, arg2, arg3):'. This convention improves readability by clearly separating the arguments while keeping the function definition compact. It's consistent with the general PEP 8 guideline of using whitespace to enhance readability without excessive spacing.
+
+10. Module Level Dunder Names
+According to PEP 8, where should the __all__ variable be placed in a module?
+
+Select one of the following options:
+At the very beginning of the file
+Right after the module docstring
+At the end of the file
+It doesn't matter where it's placed
+Submit
+
+Correct Answer:
+
+Right after the module docstring
+Explanation:
+PEP 8 recommends placing the __all__ variable (and other module level 'dunder' names) right after the module docstring, but before any import statements. The __all__ variable is used to specify which symbols should be exported when from module import * is used. Placing it near the top of the file, after the docstring, makes it easy for developers to quickly see what the module is exporting. This convention helps in organizing the module's structure and improving its readability.
