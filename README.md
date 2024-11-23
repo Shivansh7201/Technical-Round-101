@@ -4,8 +4,8 @@
 
 ## Repository Structure
 
-- **Software Engineering**: Questions and answers covering algorithms, data structures, system design, and coding challenges.
-- **Data Science**: Topics include statistics, machine learning, data analysis, and data visualization.
+Software Engineering: Questions and answers covering algorithms, data structures, system design, and coding challenges.
+- **Data Science**: Topics include statistics, machine learning, data analysis, and visualization.
 - **Cybersecurity**: Focuses on network security, cryptography, ethical hacking, and security protocols.
 
 ## Features
@@ -24,7 +24,7 @@
 
 ## Contributing
 
-- We welcome contributions from the community. If you have a question or answer that you would like to add, please follow the guidelines in the `CONTRIBUTING.md` file.
+We welcome contributions from the community. If you have a question or answer to add, please follow the guidelines in the `CONTRIBUTING.md` file.
 
 ## License
 
@@ -32,7 +32,7 @@
 
 ## Acknowledgements
 
-- We would like to thank all the contributors who have helped in creating and maintaining this repository. Your efforts are greatly appreciated.
+- We would like to thank all the contributors who have helped create and maintain this repository. Your efforts are greatly appreciated.
 
 **Happy studying and good luck with your technical interviews!**
 
