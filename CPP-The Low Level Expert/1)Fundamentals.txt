@@ -1,0 +1,81 @@
+1. Data Type Selection
+Which data type would be most appropriate for storing a person's age?
+
+
+Select one of the following options:
+float
+double
+char
+unsigned short int
+
+Correct Answer:
+
+unsigned short int
+Explanation:
+An unsigned short int is the most appropriate choice for storing a person's age. It's an integer type that can hold values from 0 to 65,535, which is more than sufficient for human age. Using float or double would be unnecessary as age doesn't require decimal precision. Char is too small, typically holding values from -128 to 127. The unsigned short int provides the right balance of memory efficiency and range for this use case.
+
+2. Operator Precedence
+What is the output of the following code?
+
+int x = 5, y = 3, z = 2;
+int result = x + y * z;
+cout << result;
+
+Select one of the following options:
+16
+11
+13
+10
+
+Correct Answer:
+
+11
+Explanation:
+The correct output is 11. This is due to operator precedence in C++. Multiplication (*) has higher precedence than addition (+). So, y * z is evaluated first (3 * 2 = 6), and then x is added to the result (5 + 6 = 11). If we wanted to force the addition to happen first, we would need to use parentheses: (x + y) * z.
+
+3. Control Structure Behavior
+What will be the output of this code?
+
+int x = 10;
+if (x > 5)
+    cout << "A";
+else if (x > 7)
+    cout << "B";
+else
+    cout << "C";
+
+Select one of the following options:
+A
+B
+C
+AB
+
+Correct Answer:
+
+A
+Explanation:
+The output will be 'A'. In an if-else if-else structure, as soon as a condition is true, its corresponding block is executed and the rest of the structure is skipped. Here, the first condition (x > 5) is true because x is 10, so 'A' is printed. Even though x > 7 is also true, that condition is never checked because the first condition was already satisfied.
+
+4. Loop Execution
+How many times will the following loop execute?
+
+for (int i = 0; i < 5; i += 2) {
+    cout << i << " ";
+}
+
+Select one of the following options:
+2 times
+3 times
+5 times
+6 times
+
+Correct Answer:
+
+3 times
+Explanation:
+The loop will execute 3 times. It starts with i = 0, then i becomes 2, and finally 4. When i becomes 6, the condition i < 5 is false, so the loop terminates. The output would be '0 2 4'. It's important to note that the loop condition is checked before each iteration, and the increment (i += 2) happens at the end of each iteration.
+
+5. Function Overloading
+Which of the following is NOT a valid way to overload a function in C++?
+
+
