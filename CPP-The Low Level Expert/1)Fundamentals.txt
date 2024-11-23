@@ -78,4 +78,131 @@ The loop will execute 3 times. It starts with i = 0, then i becomes 2, and final
 5. Function Overloading
 Which of the following is NOT a valid way to overload a function in C++?
 
+Select one of the following options:
+Changing the number of parameters
+Changing the types of parameters
+Changing the return type only
+Changing the order of parameters
+
+Correct Answer:
+
+Changing the return type only
+Explanation:
+Changing only the return type is not a valid way to overload a function in C++. Function overloading is based on the function's signature, which includes the function name and the parameter list (number, types, and order of parameters). The return type is not part of the function signature. Therefore, two functions that differ only in return type are not considered overloaded functions and will result in a compilation error.
+
+6. Variable Scope
+What will be the output of this code?
+
+int x = 5;
+void func() {
+    int x = 10;
+    cout << x << " ";
+}
+int main() {
+    func();
+    cout << x;
+    return 0;
+}
+
+Select one of the following options:
+5 5
+10 5
+10 10
+5 10
+
+
+Correct Answer:
+
+10 5
+Explanation:
+The output will be '10 5'. This demonstrates variable scope in C++. The x declared inside func() is a local variable that shadows the global x. When cout << x is called inside func(), it refers to the local x, which is 10. However, in main(), the cout << x refers to the global x, which is 5. Each variable is only accessible within its own scope.
+
+
+7. Switch Statement Behavior
+What is the output of this switch statement?
+
+int x = 2;
+switch(x) {
+    case 1:
+        cout << "One";
+    case 2:
+        cout << "Two";
+    case 3:
+        cout << "Three";
+        break;
+    default:
+        cout << "Default";
+}
+
+
+Select one of the following options:
+Two
+TwoThree
+One
+Default
+
+Correct Answer:
+
+TwoThree
+Explanation:
+The output will be 'TwoThree'. In a switch statement, once a matching case is found, execution continues through subsequent cases until a break statement is encountered. This behavior is called 'fall-through'. Here, x is 2, so execution starts at case 2, prints 'Two', then falls through to case 3, prints 'Three', and then encounters a break, ending the switch statement. To prevent fall-through, each case should typically end with a break statement.
+
+8. Reference Variable
+What will be the output of this code?
+
+int x = 5;
+int& y = x;
+y++;
+cout << x << " " << y;
+
+Select one of the following options:
+5 6
+6 6
+5 5
+6 5
+
+Correct Answer:
+
+6 6
+Explanation:
+The output will be '6 6'. In this code, y is declared as a reference to x. This means y is an alias for x; they refer to the same memory location. When we increment y, we're actually incrementing x. Therefore, both x and y are increased to 6. References in C++ provide a way to create an alternative name for an existing variable, and any changes made through the reference affect the original variable.
+
+9. Const Keyword Usage
+Which of the following is a correct way to declare a constant integer in C++?
+
+Select one of the following options:
+const int x;
+int const x;
+const int x = 10;
+const x = 10;
+
+Correct Answer:
+
+const int x = 10;
+Explanation:
+The correct way to declare a constant integer in C++ is 'const int x = 10;'. The const keyword in C++ is used to declare constants, which are variables whose values cannot be modified after initialization. When using const, you must initialize the variable at the time of declaration. Both 'const int x;' and 'int const x;' are syntactically correct, but they don't provide an initial value, which is required for constants. 'const x = 10;' is incorrect because it doesn't specify the type of x.
+
+10. Ternary Operator
+What does this code output?
+
+int x = 5, y = 10;
+cout << (x < y ? "Less" : "Greater or Equal");
+
+Select one of the following options:
+Less
+Greater or Equal
+5
+10
+
+Correct Answer:
+
+Less
+Explanation:
+The output will be 'Less'. This code demonstrates the use of the ternary operator (?:) in C++. The ternary operator is a shorthand way of writing an if-else statement. Its syntax is (condition ? value_if_true : value_if_false). In this case, the condition x < y is true (5 is less than 10), so the expression evaluates to the string 'Less'. If x were not less than y, it would output 'Greater or Equal'.
+
+
+
+
+
+
 
