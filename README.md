@@ -18,13 +18,13 @@ Software Engineering: Questions and answers covering algorithms, data structures
 ## How to Use This Repository
 
 1. **Browse by Category**: Navigate through the different categories to find questions relevant to your field.
-2. **Study the Explanations**: Read through the detailed explanations to understand the concepts.
+2. **Study the Explanations**: Read the detailed explanations to understand the concepts.
 3. **Practice Coding**: Use the sample code and practice problems to hone your coding skills.
 4. **Stay Updated**: Regularly check for updates as new questions and answers are added frequently.
 
 ## Contributing
 
-We welcome contributions from the community. If you have a question or answer to add, please follow the guidelines in the `CONTRIBUTING.md` file.
+We welcome contributions from the community. If you have a question or answer, please follow the guidelines in the `CONTRIBUTING.md` file.
 
 ## License
 
@@ -32,7 +32,7 @@ We welcome contributions from the community. If you have a question or answer to
 
 ## Acknowledgements
 
-- We would like to thank all the contributors who have helped create and maintain this repository. Your efforts are greatly appreciated.
+- We would like to thank all the contributors who have helped create and maintain this repository. I appreciate your efforts.
 
 **Happy studying and good luck with your technical interviews!**
 
